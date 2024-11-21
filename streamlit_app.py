@@ -51,12 +51,16 @@ if uploaded_file is not None:
     # 클래스별 확률을 HTML과 CSS로 시각화
     st.markdown("<h3>클래스별 확률:</h3>", unsafe_allow_html=True)
 
-    # if prediction == labels[0]:
-    #     st.write("중냉 꿋굿")
-    # elif prediction == labels[1]:
-    #     st.write("짜장면은 굿")
-    # elif prediction == labels[2]:
-    #     st.write("짬뽕은 맵지만 맛있어!!")
+    if prediction == labels[0]:
+         st.write("투모로우바이투게더가 ㄹㅇ 잘생김")
+    elif prediction == labels[1]:
+         st.write("사실 잘생긴건 더보이즈가 가장 잘생김")
+    elif prediction == labels[2]:
+         st.write("잘생기기도 했지만 웃긴건 세븐틴이 1등임")
+    elif prediction == labels[3]:
+         st.write("사람많으면 많을수록 잘생긴 사람이 많아지죠,,ㅎ")  
+    elif prediction == labels[4]:
+         st.write("2학년 1반 박수진이 좋아하는 그룹임ㅋㅋㅋㅋ")        
 
     for label, prob in zip(labels, probs):
         # HTML 및 CSS로 확률을 시각화
